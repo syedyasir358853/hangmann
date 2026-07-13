@@ -1,4 +1,7 @@
+import { arrCountries, arrVehicles } from "./variables.mjs";
+
 const guessesLeft = document.getElementById("guessLeft");
+
 const img = document.getElementById("img");
 const randWordDiv = document.getElementById("randomWord");
 const inp = document.getElementById("guessChar");
@@ -30,6 +33,9 @@ const row3 = document.getElementById("row3");
 let word = "";
 let guess = 7;
 let appendedWord = "";
+
+
+
 
 const arrAnimals = [
   // Animals
@@ -99,7 +105,7 @@ const imgArr = [
   "imagesF.jpg",
 ];
 
-let arrCom = [arrAnimals, arrFruits];
+let arrCom = [arrAnimals, arrFruits, arrCountries, arrVehicles];
 
 let imgIndex = 1;
 let wordHint = "";
@@ -156,16 +162,24 @@ function GenerateWord() {
   }
   randWordDiv.replaceChildren();
   headingAnimalsFruits.style.display = "inline-block";
-  let y = Math.floor(Math.random() * 2);
+  let y = Math.floor(Math.random() * arrCom.length);
   let arr = arrCom[y];
   let x = Math.floor(Math.random() * arr.length);
   let len = arr[x].length;
-  y === 0
-    ? (headingAnimalsFruits.innerText = "Animal")
-    : (headingAnimalsFruits.innerText = "Fruit");
+  switch(y){
+    case 0: 
+        headingAnimalsFruits.innerText = "Animal"; break;
+    case 1:
+        headingAnimalsFruits.innerText = "Fruit"; break;
+    case 2:
+        headingAnimalsFruits.innerText = "Country"; break;
+    case 3:
+        headingAnimalsFruits.innerText = "Vehicle"; break;
+  }
+  
 
   console.log(len);
-  for (i = 0; i < len; i++) {
+  for (let i = 0; i < len; i++) {
     const span = document.createElement("span");
     span.style.color = "#ee4c4c";
     const textnode = document.createTextNode("X");
