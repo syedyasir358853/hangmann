@@ -15,8 +15,8 @@ const stats = document.getElementById("stats");
 let streak = 0;
 const streakBar = document.getElementById("streak");
 const hiStreak = document.getElementById("sStreak");
-stats.style.display = "none";
-hiStreak.style.display = "none";
+stats.style.visibility = "hidden";
+hiStreak.style.visibility = "hidden";
 headingAnimalsFruits.style.display = "none";
 SaveTitle.innerText = "Save The Hanging MAN";
 SaveTitle.style.background = "#d7cef5";
@@ -106,8 +106,8 @@ let wordHint = "";
 let hintLeft = 3;
 
 function startGame() {
-stats.style.display = "flex";
-hiStreak.style.display = "flex";
+stats.style.visibility = "visible";
+hiStreak.style.visibility = "visible";
 
 
 
