@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hang Man</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div id="outerDiv">
+      <div id="title">
+        <h1>THE HANG MAN</h1>
+         
+      </div>
+      <div id="newDiv">
+      <h2   id="Saveman" >Save the hanging man</h2>
+      </div>
+      <div id="bodydiv">
+        <div id="stats">
+          <h3 id="guessLeft"></h3>
+          <h3 id="streak"></h3>
+          <button id="hintBtn" hidden></button>
+        </div>
+        <div id="heroImg">
+          <img
+            id="img"
+            src="images1.jpg"
+            alt="img of hang man"
+            width="300"
+            height="300"
+          />
+        </div>
+        <div id="sStreak">
+          <h3 id="savedStreak"></h3>
+        </div>
+      </div>
+      <div id="lowerBody">
+        <h5 id="wordInfo" ></h5>
+
+        <div class="hide" id="randomWord"></div>
+        <button id="startBtn">START</button>
+
+
+        <button id="playAgain" hidden>Play Again</button>
+
+        <div id="buttons">
+          <div id="row1"></div>
+          <div id="row2"></div>
+          <div id="row3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
